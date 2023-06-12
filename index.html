@@ -11,7 +11,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>Pusula Restaurant</title>
+    <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+
+
+    <title>Restaurant Web Sitesi</title>
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
@@ -19,41 +25,49 @@
       <a href="#" class="logo">
         <img src="images/SiteLogo.png" alt="logo" />
       </a>
-      <nav class="navbar active">
+      <nav class="navbar">
         <a href="#home" class="active">Anasayfa</a>
         <a href="#about">Hakkında</a>
         <a href="#menu">Menü</a>
         <a href="#products">Ürünler</a>
         <a href="#contact">İletişim</a>
       </nav>
+
       <div class="buttons">
-        <button id="search-btn">
-          <i class="fas fa-search"></i>
-        </button>
-        <button id="cart-btn">
-          <i class="fas fa-shopping-cart"></i>
-        </button>
-        <button id="menu-btn">
-          <i class="fas fa-bars"></i>
-        </button>
+            <button id="search-btn">
+              <i class="fas fa-search"></i>
+            </button>
+            <button id="cart-btn">
+              <i class="fas fa-shopping-cart"></i>
+            </button>
+            <button id="menu-btn">
+              <i class="fas fa-bars"></i>
+            </button>
       </div>
+
       <div class="search-form">
-        <input type="text" class="search-input" id="search-box" placeholder="Arama Yapın"/>
-        <i class="fas fa-search"></i>
+            <input type="text" class="search-input" id="search-box" placeholder="Arama Yapın"/>
+            <i class="fas fa-search"></i>
       </div>
-      <div class="cart-items-container">
-        <div class="cart-item">
-            <i class="fas fa-times"></i>
-            <img src="images/menu-2.png" alt="menu">
-            <div class="content">
-                <h3>Ürün 1</h3>
-                <div class="price">49.99₺/-</div>
-            </div>
+
+      <div class="cartitemscontainer">
+        <a class="btn" data-modal-target="#modal">Sipariş Ver</a>
+
+        <div class="modal" id="modal">
+          <div class="modal-header">
+            <div class="title">Bilgi Mesajı</div>
+            <button data-close-button class="close-button">&times;</button>
+          </div>
+          <div class="modal-body">
+            SİPARİŞİNİZ ALINMIŞTIR ! ❤
+          </div>
         </div>
-        <a href="#" class="btn">Sipariş Ver</a>
+        <div id="overlay"></div>
       </div>
+
     </header>
     <section class="home" id="home">
+
       <div class="content">
         <h3>HEMEN SİPARİŞ VER</h3>
         <p>
@@ -61,12 +75,16 @@
           corporis ducimus, ab modi quod vitae ut? Dolore, quisquam! Culpa,
           neque?
         </p>
-        <a href="#menu" class="btn">Sipariş Ver</a>
+        <a href="#" class="btn">Sipariş Ver</a>
       </div>
+
     </section>
+
     <section class="menu" id="menu">
+
       <h1 class="heading">MENÜ</h1>
-      <div class="box-container">
+      <div class="boxcontainer">
+
         <div class="box">
           <div class="box-head">
             <img src="images/menu-2.png" alt="menu" />
@@ -75,9 +93,10 @@
             <div class="price">49.99₺ <span>69.99₺</span></div>
           </div>
           <div class="box-bottom">
-            <a href="#" class="btn">Sepete Ekle</a>
+            <a class="btn" >Sepete Ekle</a>
           </div>
         </div>
+
         <div class="box">
           <div class="box-head">
             <img src="images/menu-4.png" alt="menu" />
@@ -85,10 +104,12 @@
             <h3>Köfte Burger</h3>
             <div class="price">59.99₺ <span>79.99₺</span></div>
           </div>
+
           <div class="box-bottom">
-            <a href="#" class="btn">Sepete Ekle</a>
+            <a class="btn">Sepete Ekle</a>
           </div>
         </div>
+
         <div class="box">
           <div class="box-head">
             <img src="images/product-1.png" alt="menu" />
@@ -97,9 +118,10 @@
             <div class="price">69.99₺ <span>89.99₺</span></div>
           </div>
           <div class="box-bottom">
-            <a href="#" class="btn">Sepete Ekle</a>
+            <a class="btn">Sepete Ekle</a>
           </div>
         </div>
+
         <div class="box">
           <div class="box-head">
             <img src="images/product-2.png" alt="menu" />
@@ -108,14 +130,16 @@
             <div class="price">79.99₺ <span>99.99₺</span></div>
           </div>
           <div class="box-bottom">
-            <a href="#" class="btn">Sepete Ekle</a>
+            <a class="btn">Sepete Ekle</a>
           </div>
         </div>
+
+
       </div>
     </section>
     <section class="products" id="products">
       <h1 class="heading">ÜRÜNLERİMİZ</h1>
-      <div class="box-container">
+      <div class="boxcontainer">
         <div class="box">
           <div class="box-head">
             <span class="title">BURGER</span>
@@ -195,7 +219,7 @@
     <section class="contact" id="contact">
         <h1 class="heading">İLETİŞİM</h1>
         <div class="row">
-            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114937.55467260821!2d-80.22271430498586!3d25.810218178273725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9a6172bfeddb9%3A0x37be1741259463eb!2sMiami%20Beach%2C%20Florida%2C%20Amerika%20Birle%C5%9Fik%20Devletleri!5e0!3m2!1str!2str!4v1682610893968!5m2!1str!2str" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3004.081629011029!2d27.84590527651662!3d41.154570110403455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b4e0d0b10053fd%3A0x3ee8dc87a21d962f!2zZzMsIEVzZW50ZXBlLCBBZG5hbiBEb8SfdSBDZC4gTm86MTgsIDU5ODUwIMOHb3JsdS9UZWtpcmRhxJ8!5e0!3m2!1str!2str!4v1686596267630!5m2!1str!2str" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <form>
                 <h3>BİZE ULAŞIN</h3>
                 <div class="inputBox">
@@ -222,16 +246,16 @@
         <div class="share">
             <a href="#" class="fab fa-facebook"></a>
             <a href="#" class="fab fa-twitter"></a>
-            <a href="https://www.instagram.com/pusularestaurantcorlu/" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-instagram"></a>
             <a href="#" class="fab fa-linkedin"></a>
             <a href="#" class="fab fa-pinterest"></a>
         </div>
         <div class="links">
-        <a href="#home">Anasayfa</a>
-        <a href="#about">Hakkında</a>
-        <a href="#menu">Menü</a>
-        <a href="#products">Ürünler</a>
-        <a href="#contact">İletişim</a>
+        <a href="#">Anasayfa</a>
+        <a href="#">Hakkında</a>
+        <a href="#">Menü</a>
+        <a href="#">Ürünler</a>
+        <a href="#">İletişim</a>
         </div>
         <div class="credit">
             Created By <span>Batuhan Korkmaz & Ali Cem Kartal</span> | All Rights Reserved
